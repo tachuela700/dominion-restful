@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Declarar espacio de nombres Thymeleaf -->
+<html xmlns:th="http://www.thymeleaf.org">			
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="FarmatoolsWeb" />
+		<meta name="author" content="Dominion digital" />
+		<meta name="robots" content="noindex, nofollow" />
+		 <!-- Tell the browser to be responsive to screen width -->
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		
+		<title>Dominion RESTFul</title>
+		<!-- Enlace th:href a la hoja de estilos -->
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap/3.3.6/css/bootstrap.min.css}"></link>	
+		<link rel="stylesheet" type="text/css" th:href="@{/res/css/estilos.css}"></link>	
+	</head>
+	<body>
+		<h1>Index</h1>
+		
+		<!-- Enlace th:href a home -->
+		<a th:href="@{/home}">Home</a>	
+		
+	</body>
+</html>	
