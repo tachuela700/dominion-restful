@@ -80,7 +80,8 @@ BODY:{
 	"codigoPais": 998
 }
 
-
+delete angular
+--------------
 remove: function(item) {
 	$http({
 		  method: 'DELETE',
