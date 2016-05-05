@@ -79,3 +79,18 @@ HEADERS: Content-Type-->application/json
 BODY:{
 	"codigoPais": 998
 }
+
+
+remove: function(item) {
+	$http({
+		  method: 'DELETE',
+		  url: baseUrl,
+		  data: JSON.stringify(item),
+		  headers: {'Content-Type': 'application/json'}
+		}).then(function(response) {
+			alert(response);
+		},function(response) {
+			alert(response);
+		});
+	
+}

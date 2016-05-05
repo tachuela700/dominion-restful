@@ -176,6 +176,9 @@ public class PaisRestController extends BaseController {
 			entidad.setPaisNombre(dto.getPaisNombre());
 			entidad.setPaisIsonum(dto.getPaisIsonum());
 
+			//Se actualiza el registro en el sistema
+			service.update(entidad);
+			
 			logger.debug("mapeando el objeto: ["+entidad+"]");
             //Se mapea al objeto de salida
 	    	resultado = mapper.map(entidad, PaisDto.class);

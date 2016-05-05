@@ -154,10 +154,10 @@ public class PaisSpecification {
 				List<Predicate> predicates = new ArrayList<Predicate>();
 		
 				if (searchBasic != null) {
-					predicates.add(cb.like(root.get(Pais_.paisIso2), "%".concat(searchBasic.concat("%"))));
-					predicates.add(cb.like(root.get(Pais_.paisIso3), "%".concat(searchBasic.concat("%"))));
-					predicates.add(cb.like(root.get(Pais_.paisNombre), "%".concat(searchBasic.concat("%"))));
-					predicates.add(cb.like(new StrFunction<Integer> (cb, root.get(Pais_.paisIsonum)), "%".concat(searchBasic.concat("%"))));					
+					predicates.add(cb.like(cb.upper(root.get(Pais_.paisIso2)), "%".concat(StringUtils.upperCase(searchBasic).concat("%"))));
+					predicates.add(cb.like(cb.upper(root.get(Pais_.paisIso3)), "%".concat(StringUtils.upperCase(searchBasic).concat("%"))));
+					predicates.add(cb.like(cb.upper(root.get(Pais_.paisNombre)), "%".concat(StringUtils.upperCase(searchBasic).concat("%"))));
+					predicates.add(cb.like(new StrFunction<Integer> (cb, root.get(Pais_.paisIsonum)), "%".concat(StringUtils.upperCase(searchBasic).concat("%"))));					
 				}
 		
 				return cb.or(predicates.toArray(new Predicate[ ] { }));
